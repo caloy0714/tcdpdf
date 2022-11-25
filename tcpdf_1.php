@@ -37,7 +37,7 @@ class MYPDF extends TCPDF {
         // disable auto-page-break
         $this->SetAutoPageBreak(false, 0);
         // set bacground image
-        $img_file = K_PATH_IMAGES.'doge.jpg';
+        $img_file = K_PATH_IMAGES.'mypic.jpg';
         $this->Image($img_file, 0, 0, 210, 297, '', '', '', false, 300, '', false, false, 0);
         // restore auto-page-break status
         $this->SetAutoPageBreak($auto_page_break, $bMargin);
@@ -86,6 +86,8 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 
 // set font
 $pdf->SetFont('times', '', 30);
+$pdf->SetTextColor(0, 0, 100, 0);
+
 
 // add a page
 $pdf->AddPage();
